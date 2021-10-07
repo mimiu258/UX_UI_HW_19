@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+/*Typography from my design on Figma*/
+html{scroll-behavior: smooth;}
+h5{font-family: 'Merriweather',sans-serif; font-size: 20px; font-weight:600;}
+p{font-family: 'Merriweather',sans-serif; font-size: 15px; margin: 5px 0;}
+*{box-sizing: border-box; margin: 0; padding: 0;}
+/*Back To Top Button*/
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 15%;
+    right: 50px;
+    opacity: 60%;
+    height: 70px; 
+    width: 70px;
+}
+#backToTop:hover{
+    transform: ease 0.3s;
+    opacity: 80%;
+}
+/*Header*/
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    animation: movedown 1s ease-in 1s;
+    animation-delay: 3s;
+}
+.inline-block {
+    display: inline-block;
+    vertical-align: top ;list-style: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+}
+nav{font-family: Merriweather;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: #3E7269;
+    list-style: none;}
+li{display: inline-block;
+padding: 0px 20px;
+transition: 00.3s;}
+li:hover{
+    color: #DF9C93;
+    font-weight: bolder;
+}
+.logo{ cursor: pointer;
+     width: auto;
+        display: inline-flex;
+        align-items: center;}
+/*Falling pedals*/
+.pedal1{
+    position: absolute;
+    top: -30%;
+    right: 40%;
+    animation: fall1 12s linear infinite;
+    animation-delay: 4s;
+}
+.pedal2{
+    position: absolute;
+    top: -20%;
+    left: 30%;
+    height: 20px;
+    width: 25px;
+    animation: fall2 12s linear infinite;
+    animation-delay: 8s;
+}
+
+/*Animate Icons*/
+.sakura1{
+    opacity: 70%;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 80%;
+    left: 10%;
+    animation: shake 2s infinite;
+}
+.sakura2{
+    opacity: 70%;
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    top: 15%;
+    right: 10%;
+    animation: shake 3s infinite;
+}
+.sakura3{
+    position: absolute;
+    height: 38px;
+    animation: shake 2s infinite;
+    top: 85%;
+    right: 35%;
+}
+.sakura4{
+    position: absolute;
+    height: 38px;
+    animation: shake 2s infinite;
+    top: 5%;
+    right: 50%;
+}
+/*hero image section*/
+#heroImg{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+   
+.intro {
+    padding-left: 8px;
+    animation: moveleft 1s ease-in 1s;
+    animation-delay: 3s;
+}
+.image {
+    padding-right: 8px;
+    animation: moveright 1s ease-in 1s;
+    animation-delay: 3s;
+}
+
+.upper{font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 31px;
+    color: #3E7269;
+    background-color: white;
+    padding: 10px 0px;}
+.lower {width: 379px;
+    text-align: justify;font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 16px;
+    padding: 10px 0px;}
+/*"My Resume PDF" button*/
+.button1{width: 162px;
+    height: 46px;
+    left: 554px;
+    top: 414px;
+    border:none;
+    border-radius: 5%;
+    background-color: #e28e83;
+    font-family: 'Merriweather',sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: center;    
+    color: white;;
+    margin: 10px 0px;
+    transition: ease-out 0.3s;
+    box-shadow: inset 10px 0 0 0 #6da392;
+} 
+.button1:hover{ color: white;
+    border: none;
+    box-shadow: inset 162px 0 0 0 #6da392;
+}
+
+/*My Skills*/
+.mySkill{border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 2% 5%;
+    padding: 20px 7%;
+    text-align: center;
+    color: #3E7269;   
+    border: 1px Solid #CCDAD7;}
+.flexContainer{display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;}
+    .skill{
+        width: auto;
+        margin: 10px;
+    }
+    .note{font-family:'Merriweather',sans-serif;
+        font-weight: lighter;
+        font-size: 13px;
+        color: black;
+        text-align:justify;
+        padding: 10px 0;
+        margin: auto;
+        width: 157px;}  
+   
+    /*My Work*/
+.myWork{
+    border-radius: 20px;
+    padding: 20px 7%;
+    margin: 2% 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    color: #3E7269;
+    border: 1px Solid #CCDAD7;}
+.workGrid{
+    margin: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 350px;
+    grid-template-areas: "item1 item2 item3";
+    align-items: center;
+}
+/*Project Overlay section*/
+.project-overlay{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.project-overlay:hover{
+    opacity: 1;
+}
+.project-overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.3s;
+}
+.project-overlay:hover > * {
+    transform: translateY(0);
+}
+.seeProject-btn{
+    height: 35px;
+    width:107px;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.6);
+    border: 1px solid white;
+    transition: ease 0.3s;
+}
+.seeProject-btn:hover{
+    transition: ease 0.3s;
+    background-color:rgba(255, 255, 255, 0.3);
+}
+.projectTitle{ 
+    text-align: center;
+}
+.description{
+    margin: 20px 0;
+}
+.seeMore{
+    background-color: transparent;
+    border: 1px solid black;
+    width: 162px;
+    height: 46px;}
+/* grid area*/
+#project1{
+    grid-area: item1;
+    position: relative;
+    margin: 10px;
+    width: auto;
+    background-image: url('../images/project1-cover.png');
+}
+#project2{
+    position: relative;
+    grid-area: item2;
+    margin: 10px;
+    width: auto;
+    background-image: url('../images/project2-cover.png');
+}
+#project3{
+    position: relative;
+    grid-area: item3;
+    margin: 10px;
+    width: auto;
+    background-image: url('../images/project3-cover.png');
+}
+.projectGridArea{ 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    width: auto;
+    height: 309.82px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;}
+.heading{width: auto;
+    height: 72px;
+    padding:5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 17px;
+    font-family: 'Merriweather',sans-serif;
+    font-weight: 700;
+    text-align: center;}
+/*footer*/   
+.copyright{font-family: Merriweather;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    padding: 5px 0px;
+}
+.mediaAccounts {padding: 5px 0px;}
+.footerContact{display: flex;
+justify-content: center;
+padding: 5px 0px;}
+
+/*Preloader*/
+.preloader{position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100000;
+    background-color: #e28e83;
+    top: 0;
+    display: flex;
+    align-items: center;}
+    .preloader img {animation: spin 3s ease;
+      width:150px;
+    margin: 0 auto;}
+    
+.pedal3{
+    position: absolute;
+    top: -30%;
+    right: 10%;
+    animation: fall3 10s linear infinite;
+    animation-delay: 10s;
+    
+}
+
+
+@keyframes fall3{
+    0%{
+        opacity: 10%;
+        transform: 
+        translateY(50px) rotate(0deg);
+    }
+    20%{
+        opacity: 100%;
+        transform:
+         translateY(150px) translateX(150px) rotate(20deg);
+    }
+    40%{transform: 
+        translateY(250px) translateX(20px) rotate(60deg);
+    }
+    60%{transform: 
+        translateY(350px) translateX(-40px) rotate(80deg);
+    }
+    80%{transform: 
+        translateY(450px) translateX(100px) rotate(20deg);
+    }
+    100%{transform: 
+        translateY(700px) translateX(200px) rotate(80deg);
+    }
+}
+@keyframes fall2{
+    0%{
+        opacity: 10%;
+        transform: translateY(30px) rotate(0deg);
+    }
+    20%{
+        opacity: 100%;
+        transform: translateY(60px) translateX(-20px)
+        rotate(20deg);
+    }
+    40%{transform: 
+        translateY(150px) translateX(-100px) rotate(60deg);
+    }
+    60%{transform: 
+        translateY(250px) translateX(-200px) rotate(80deg);
+    }
+    80%{transform: 
+        translateY(300px) translateX(-300px) rotate(20deg);
+    }
+    100%{transform: 
+        translateY(400px) translateX(-400px) rotate(80deg);
+    }
+}
+    @keyframes fall1{
+    0%{
+        opacity: 10%;
+        transform: translateY(20px) rotate(0deg);
+    }
+    5%{
+        opacity: 100%;
+        transform: translateY(80px) translateX(-20px)
+        rotate(20deg);
+    }
+    20%{transform: 
+        translateY(180px) translateX(-30px) rotate(60deg);
+    }
+    40%{transform: 
+        translateY(380px) translateX(-100px) rotate(80deg);
+    }
+    50%{transform:
+        translateY(450px) translateX(-170px) rotate(40deg);
+    }
+    60%{transform: 
+        translateY(670px) translateX(-290px) rotate(100deg);
+    }
+    90%{transform: 
+        translateY(800px) translateX(-370px) rotate(300deg);
+    }
+    80%{
+        opacity: 20%;
+        transform:
+        translateY(1000px) translateX(-500px) rotate(300deg);
+    }
+    100%{
+        opacity: 0;
+        transform:
+        translateY(1500px) translateX(-850px) rotate(200deg);
+    }
+}
+@keyframes movedown{
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px)
+    }
+}
+@keyframes moveright{
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes moveleft{
+    0%{
+        transform: translateX(100px);
+    }
+    100%{
+        transform: translateX(0px)
+    }
+}
+@keyframes shake{
+    0%{transform: rotate(0);
+    }
+    50%{transform: rotate(40deg);
+    }
+}
+@keyframes spin {
+    0% {
+     transform: rotate(0deg);
+    }
+    50%{
+      transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(720deg);
+    }
+    
+  }
+@media only screen and (max-width: 600px) {
+.workGrid {
+   grid-template-rows: 350px 350px 350px;
+   grid-template-columns: 1fr;
+   grid-template-areas: 
+   "item1"
+   "item2"
+   "item3";
+    }
+.flexContainer{
+    flex-direction: column;
+    width: auto;
+}
+#heroImg{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.sakura1{
+    top: 90%;
+}
+.sakura3{
+    display: none;
+}
+  }
