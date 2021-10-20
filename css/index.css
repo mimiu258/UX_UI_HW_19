@@ -6,6 +6,7 @@ p{font-family: 'Merriweather',sans-serif; font-size: 15px; margin: 5px 0;}
 *{box-sizing: border-box; margin: 0; padding: 0;}
 /*Back To Top Button*/
 #backToTop {
+    z-index:1
     display: none;
     position: fixed;
     bottom: 15%;
@@ -53,14 +54,14 @@ li:hover{
         align-items: center;}
 /*Falling pedals*/
 .pedal1{
-    position: absolute;
+    position: fixed;
     top: -30%;
     right: 40%;
     animation: fall1 12s linear infinite;
     animation-delay: 4s;
 }
 .pedal2{
-    position: absolute;
+    position: fixed;
     top: -20%;
     left: 30%;
     height: 20px;
@@ -317,7 +318,7 @@ padding: 5px 0px;}
     margin: 0 auto;}
     
 .pedal3{
-    position: absolute;
+    position: fixed;
     top: -30%;
     right: 10%;
     animation: fall3 10s linear infinite;
