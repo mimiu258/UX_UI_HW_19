@@ -19,3 +19,4 @@ var myButton=document.getElementById("backToTop")
     function backToTop(){
         window.scrollTo(0,0);
     }
+//Hamburger menu on click//

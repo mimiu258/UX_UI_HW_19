@@ -8,6 +8,7 @@ p{font-family: 'Merriweather',sans-serif; font-size: 15px; margin: 5px 0;}
 #backToTop {
     display: none;
     position: fixed;
+    z-index: 1;
     bottom: 15%;
     right: 50px;
     opacity: 60%;
@@ -18,14 +19,151 @@ p{font-family: 'Merriweather',sans-serif; font-size: 15px; margin: 5px 0;}
     transform: ease 0.3s;
     opacity: 80%;
 }
+a li{
+    list-style: none;
+    text-decoration: none;
+}
 /*Header*/
 header {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     animation: movedown 1s ease-in 1s;
     animation-delay: 3s;
+}
+/*Hamburger Menu :> */
+.mobileHeader{
+    display:none;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 2% 2% 7% 2%;
+
+}
+@media (max-width:768px){
+   .mobileHeader {
+       display:flex;
+}
+}
+
+.menuBtn button{
+    position: relative;
+    padding: 2%;
+}
+
+.logoMobile{
+    position: absolute;
+    padding: 0 40%;
+}
+.dropdown-content{
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transform: translate(-50px);
+    background-color: white;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+}
+.closeBtn{
+    position: absolute;
+    z-index: 2;
+    right: 0;
+}
+.dropdown-content ul {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 5% 0;
+
+    background-color: white;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 40% 0;
+    display: block;
+}
+.menuBtn{
+    position: relative;
+    border: none;
+    background-color: transparent;
+    right: 2%;
+}
+.flexNav{
+    background-color: white;    
+}
+.close{
+    display: none;
+}
+.closeBtn{
+    border: none;
+    background-color: transparent;
+
+}
+@media (max-width: 768px){
+    .hamMenu{
+        position: relative;
+        display: flex;
+        height: 100px;
+        width: 100%;
+    }
+
+    .close{
+        display: flex;
+        position: absolute;
+        top: 90%;
+        right: 20;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        border: none;
+    }
+    li{
+        background-color: white;
+    }
+    .line{
+        margin: 8px 4px;
+        border-bottom: 1px solid #e5e5e5;
+        width: 50px;
+        height: 0 !important;
+        border-right:0 !important;
+    }
+    .logo{
+        display: none !important;
+    }
+    .flexHamNav.ul2{
+        position: absolute;
+        top: 70px;
+        border-right: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+  
+}
+
+/*Regular nav. bar*/
+a{
+    list-style: none;
+    text-decoration: none;
+    color: #3E7269;
+}
+.line{
+    border-right: 2px solid #e5e5e5;
+    display: inline-block;
+    height: 20px;
+    margin: 4px 8px;
+    vertical-align: middle;
 }
 .inline-block {
     display: inline-block;
@@ -40,12 +178,13 @@ nav{font-family: Merriweather;
     line-height: 21px;
     color: #3E7269;
     list-style: none;}
-li{display: inline-block;
-padding: 0px 20px;
-transition: 00.3s;}
-li:hover{
+.ul li{
+    display: inline-block;
+    padding: 0px 20px;
+    transition: 00.3s;
+}
+a:hover{
     color: #DF9C93;
-    font-weight: bolder;
 }
 .logo{ cursor: pointer;
      width: auto;
@@ -61,7 +200,7 @@ li:hover{
 }
 .pedal2{
     position: absolute;
-    top: -20%;
+    top: -30%;
     left: 30%;
     height: 20px;
     width: 25px;
@@ -160,12 +299,12 @@ li:hover{
 
 /*My Skills*/
 .mySkill{border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
     margin: 2% 5%;
     padding: 20px 7%;
     text-align: center;
     color: #3E7269;   
-    border: 1px Solid #CCDAD7;}
+    border: none;}
 .flexContainer{display: flex;
     flex-direction: row;
     justify-content: center;
@@ -189,10 +328,10 @@ li:hover{
     border-radius: 20px;
     padding: 20px 7%;
     margin: 2% 5%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.3);
     text-align: center;
     color: #3E7269;
-    border: 1px Solid #CCDAD7;}
+    border: none;}
 .workGrid{
     margin: 0 5%;
     display: grid;
@@ -247,9 +386,14 @@ li:hover{
 }
 .seeMore{
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid #3E7269;
+    color: #3E7269;
     width: 162px;
     height: 46px;}
+.seeMore:hover{
+    color: white;
+    background-color: #76afa6;
+}
 /* grid area*/
 #project1{
     grid-area: item1;

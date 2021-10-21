@@ -19,15 +19,47 @@ bottom: 0%;}
 <body>
 <!--Header-->
     <header>
+    <div class="navBar">
         <div class="inline-block logo" style="margin-bottom: 20px;
         margin-top: 10px">
             <img class="logo" src="images/mainlogo.png" alt="Home" width="65" height="65">
         <nav class="inline-block">
-           <ul> <li>Work</li> | <li>Arts</li> | <li>About Me</li> | <li>Contact</li>
+           
+            <ul class="ul"> 
+                <li><a href="#">Work</a></li> <div class="line"></div>
+                <li><a href="#">Arts</a></li> <div class="line"></div>
+                <li><a href="#">About Me</a></li> <div class="line"></div>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        </div>
-    </header>
+    </div>
+
+    </div>
+    <!--Hamburger menu-->
+    <div class="mobileHeader">
+        <button type="button" class="menuBtn" style="border: 0; background-color: transparent; padding: 0 2%;">
+            <img src="images\Ham.menu.png" style="width:50px; margin: 2%;">
+        </button>
+        <img class="logoMobile" src="images/logoMobile.png" style="height: 60px;">
+    </div>
+    <div class="dropdown-content">
+    
+    <button type="button" class="closeBtn">
+            <img src="images/close.png" style="height: 25px; margin:5px;">
+    </button>
+
+        <ul> 
+            <li><a href="#">Work</a></li> <div class="line"></div>
+            <li><a href="#">Arts</a></li> <div class="line"></div>
+            <li><a href="#">About Me</a></li> <div class="line"></div>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+        
+    
+   
+</div>
+</header>
 <section id="heroImg">
 <div class="image"> 
     <img src="images\Hero image.png" width="300" height="420">
@@ -75,7 +107,7 @@ bottom: 0%;}
         </div>
     </div>
     <h5 style="padding:10px;">Tools I Know</h5>
-    <img class="tools" src="images\tools.jpg" width="302px" height="35px" style="margin-top: 10px;">
+    <img class="tools" src="images/tools.png" width="302px" height="35px" style="margin-top: 10px;">
 </section>
 <!-- My Work Section Constructed using CSS Grid -->
 <section class="myWork">
