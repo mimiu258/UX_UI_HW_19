@@ -20,3 +20,6 @@ var myButton=document.getElementById("backToTop")
         window.scrollTo(0,0);
     }
 //Hamburger menu on click//
+$('.menuBtn').on("click", function(){
+    $('.dropdown-content').slideToggle();
+  });
